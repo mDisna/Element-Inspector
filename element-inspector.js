@@ -89,8 +89,8 @@ getPath = (el) => {
 displyPath = (cssPath, elID, elClass) => {
   elInfo = "";
   if (cssPath.indexOf("#") > -1) {
-    // If the path contains an ID, start path from there
-    cssPath = cssPath.substring(cssPath.indexOf("#"));
+    // If the path contains an ID, start path from the last one
+    cssPath = cssPath.substring(cssPath.lastIndexOf("#"));
   }
   if (elID) {
     // If clicked element has ID, display it
